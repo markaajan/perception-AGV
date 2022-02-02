@@ -10,14 +10,14 @@ of further calculations that are performed. This could particularly affect proce
 normals or the calculation of centroids Some of these irregularities can be solved by performing the statistical
 analysis on each points neighborhood and trimming those which do not meet a certain criterion.
 
-# image-placeholder
+![Outlier Filtering](img/outlier.png)
 
 ### Passthrough filtering to crop the cloud
 
 Passthrough filtering is used to crop the point cloud by removing points that lie outside the defined bounds. This
 helps us to focus the processing on only the region that is required.
 
-# image-placeholder
+![Passthrough Filtering](img/cropping.png)
 
 
 ### Voxel Grid filtering
@@ -26,7 +26,7 @@ Voxel Grid filtering is used to downsample the pointcloud if it is too dense to 
 The voxelated grid approach works by dividing the input cloud into a grid of 3D boxes named voxels. The points in
 each voxel are approximated by considering the centroid of all the points in the vowel.
 
-# image-placeholder
+![Voxel Grid Filtering](img/voxel.png)
 
 ### Planar Segmentation
 
@@ -34,7 +34,7 @@ Voxel Grid filtering is used to downsample the pointcloud if it is too dense to 
 The voxelated grid approach works by dividing the input cloud into a grid of 3D boxes named voxels. The points in
 each voxel are approximated by considering the centroid of all the points in the vowel.
 
-# image-placeholder
+![Planar Segmentation](img/segmentation.png)
 
 
 ### Euclidean Clustering
@@ -48,7 +48,7 @@ if they are less than a certain distance) from the point and if they are, the po
 check is then recursively called on the neighboring points of this point as well. A minimum cluster size is defined to
 avoid the clustering of stray points.
 
-# image-placeholder
+![Euclidean Clustering](img/clustering.png)
 
 ### Obstacle detection
 
@@ -59,8 +59,8 @@ greater than zero. This Boolean variable is published on a different topic from 
 subscriber to this separate topic can be used to send messages regarding the presence of obstacles to the controlling
 computer.
 
-# image-placeholder
-# image-placeholder
+![Object Detected](img/detected.png)
+![Object Not Detected](img/notdetected.png)
 
 
 
