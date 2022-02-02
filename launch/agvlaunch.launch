@@ -1,0 +1,5 @@
+<launch>
+	<node name="obstacle_detection" pkg="agv_vision" type="obstacle_detection" />
+	<include file="$(find ifm3d)/launch/camera.launch" />
+	<node name="CAN_node" pkg="agv_vision" type="CAN_node" />
+ </launch>
